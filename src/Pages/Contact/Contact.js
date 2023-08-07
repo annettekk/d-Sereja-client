@@ -6,10 +6,10 @@ export default function Contact() {
   return (
     <>    
       <Helmet>
-        <title>Yaga Portfolio Contact Page</title>
+        <title>Jaga Galganek Photography Contact Page</title>
         <meta
         name="description"
-        content="This is the contact page for Yaga's Photography Portfoilio"/>
+        content="This is the contact page for Jaga Galganek's Photography Portfoilio"/>
         <link rel="canonical" href="/contact"/>
       </Helmet>
       <div>Contact</div>

@@ -6,10 +6,10 @@ export default function Gallery() {
   return (
     <>
       <Helmet>
-        <title>Yaga Portfolio Gallery</title>
+        <title>Jaga Galganek Photography Gallery</title>
         <meta
         name="description"
-        content="This is the gallery page for Yaga's Photography Portfoilio"/>
+        content="This is the gallery page for Jaga Galganek's Photography Portfoilio"/>
         <link rel="canonical" href="/gallery"/>
       </Helmet>
       <div>Gallery</div>

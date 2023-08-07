@@ -6,10 +6,10 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>Yaga Portfolio About Page</title>
+        <title>Jaga Galganek Photography About Page</title>
         <meta
         name="description"
-        content="This is the about page for Yaga's Photography Portfoilio"/>
+        content="This is the about page for Jaga Galganek's Photography Portfoilio"/>
         <link rel="canonical" href="/about"/>
       </Helmet>
       <div>About</div>

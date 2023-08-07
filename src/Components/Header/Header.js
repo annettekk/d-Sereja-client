@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <>
     <header>
-        <h1>Yaga Gauganek Photography</h1>
+        <h1>Jaga Galganek Photography</h1>
         <nav>
           <ul>
             <li className='navLi'> <Link className='link' to={"/"}>Home</Link></li>

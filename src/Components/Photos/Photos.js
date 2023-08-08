@@ -27,14 +27,17 @@ export default function Photos() {
     }
 
     function likePhoto(photo){
-        console.log("photo has been liked")
-        console.log(photo._id)
+        console.log(`photo with id ${photo._id} has been liked`)
     }
 
     function addToCart(photo){
         console.log(`Photo ${photo.title} has been added to cart`)
     }
 
+    function handlePhotoModal(photo){
+        console.log(`displaying larger photo of ${photo.title}`)
+        
+    }
 
   return (
     <>
@@ -42,7 +45,7 @@ export default function Photos() {
         {photos.map((photo, _id) => (
             <div key={_id} className='photoDiv'>
                 <h3 className=''>{photo.title}</h3>
-                <img className='photo' src={require(`../../${photo.photoSrc}`)} alt={photo.title}></img>
+                <img className='photo' src={require(`../../${photo.photoSrc}`)} alt={photo.title} onClick={() => handlePhotoModal(photo)}></img>
                 <button onClick={() => likePhoto(photo)}><FcLike /></button>
                 <button onClick={() => addToCart(photo)}><BsFillCartPlusFill/></button>
             </div>

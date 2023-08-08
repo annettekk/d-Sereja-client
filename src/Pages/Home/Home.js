@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
 import { Helmet } from "react-helmet-async";
-
 import HeroHome from "../../Images/HeroHome.jpg";
 
 export default function Home() {

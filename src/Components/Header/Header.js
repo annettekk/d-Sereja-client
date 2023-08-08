@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
+import { BiLogIn } from "react-icons/bi";
 
 export default function Header({ handleCartModal }) {
   return (
@@ -34,7 +35,9 @@ export default function Header({ handleCartModal }) {
           </li>
         </ul>
       </nav>
-      <div>Login placeholder</div>
+      <span className="login">
+        Log in <BiLogIn />
+      </span>
       <button onClick={() => handleCartModal()}>
         <FiShoppingCart />
       </button>

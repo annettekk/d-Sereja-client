@@ -1,55 +1,58 @@
-import "./Reset.css"
+import "./Reset.css";
 import "./App.css";
 import Header from "./Components/Header/Header";
-import Footer from "./Components/Footer/Footer"
+import Footer from "./Components/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home/Home"
-import About from "./Pages/About/About"
-import Contact from "./Pages/Contact/Contact"
-import Gallery from "./Pages/Gallery/Gallery"
-import CartModal from "./Components/CartModal/CartModal"
-import { useState } from 'react';
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import Contact from "./Pages/Contact/Contact";
+import Gallery from "./Pages/Gallery/Gallery";
+import CartModal from "./Components/CartModal/CartModal";
+import { useState } from "react";
 
 function App() {
-  
   const [modal, setModal] = useState(false);
 
-    function handleModal() {
-      setModal(!modal);
-    }
+  function handleModal() {
+    setModal(!modal);
+  }
 
-    function closeModal() {
-      setModal(!modal);
-    }
-  
-    const [cartModal, setcartModal] = useState(false);
+  function closeModal() {
+    setModal(!modal);
+  }
 
-    function handleCartModal() {
-      setcartModal(!cartModal);
-    }
+  const [cartModal, setcartModal] = useState(false);
 
-    function closeCartModal() {
-      setcartModal(!cartModal);
-    }
+  function handleCartModal() {
+    setcartModal(!cartModal);
+  }
+
+  function closeCartModal() {
+    setcartModal(!cartModal);
+  }
+
+  function addToCart(photo) {}
 
   return (
-    
-          <BrowserRouter>
-        <div className="App">
-          <Header handleCartModal={handleCartModal}></Header>
-          {cartModal && <CartModal closeCartModal={closeCartModal}/>}
-          <Routes>
-            <Route path="/" element={<Home/>}></Route>
-            <Route path="/about" element={<About/>}></Route>
-            <Route path="/gallery" element={<Gallery/>}></Route>
-            <Route path="/contact" element={<Contact/>}></Route>
-          </Routes>
-          <Footer></Footer>
-        </div>
-      </BrowserRouter>
-    
+    <BrowserRouter>
+      <div className="App">
+        <Header handleCartModal={handleCartModal}></Header>
+        {cartModal && (
+          <CartModal closeCartModal={closeCartModal} addToCart={addToCart} />
+        )}
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route
+            path="/gallery"
+            element={<Gallery addToCart={addToCart} />}
+          ></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Routes>
+        <Footer></Footer>
+      </div>
+    </BrowserRouter>
   );
 }
-
 
 export default App;

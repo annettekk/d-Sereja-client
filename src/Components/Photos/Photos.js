@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import "./Photos.css"
-import axios from "axios"
+import React, { useEffect, useState } from "react";
+import "./Photos.css";
+import axios from "axios";
 import { FcLike } from "react-icons/fc";
 import { BsFillCartPlusFill } from "react-icons/bs";
+
 
 export default function Photos() {
     const[photos, setPhotos] = useState([])
@@ -21,6 +22,8 @@ export default function Photos() {
             console.log(error)
         }
     }
+  
+
 
     const updatePhoto = async(photo) => {
         photo.liked = photo.liked + 1
@@ -31,10 +34,10 @@ export default function Photos() {
         console.log(`Photo ${photo.title} has been added to cart`)
     }
 
-    function handlePhotoModal(photo){
-        console.log(`displaying larger photo of ${photo.title}`)
-        
-    }
+
+  function handlePhotoModal(photo) {
+    console.log(`displaying larger photo of ${photo.title}`);
+  }
 
   return (
     <>
@@ -48,5 +51,5 @@ export default function Photos() {
             </div>
         ))}
     </>
-  )
+  );
 }

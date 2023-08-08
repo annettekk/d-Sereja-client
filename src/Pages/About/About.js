@@ -18,7 +18,7 @@ export default function About() {
       <div>
         <h2 className="about-header">About</h2>
         <img className="about-photo" src={aboutPhoto} alt="About photo" />
-        <p>
+        <p className="aboutP">
           Jaga is a Polish film photographer, based in Suffolk, UK. She shoots
           film since her teenage years. Her first camera was soviet Zenit-E. At
           the moment she uses 35mm - Pentax ME super and medium format - Pentax
@@ -39,7 +39,7 @@ export default function About() {
           evoking a sense of foreboding.
         </p>
         <h2 className="equipment">Equipment</h2>
-        <p>
+        <p className="aboutP">
           Navigating the realms of film, Jaga wields the Pentax ME Super and
           Pentax 6x7 as her creative companions. With the ME Super, she dances
           between hues, capturing life in vivid colors while honing her focus

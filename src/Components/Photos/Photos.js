@@ -22,10 +22,6 @@ export default function Photos() {
         }
     }
 
-    function likePhoto(photo){
-        console.log(`photo with id ${photo._id} has been liked`)
-    }
-
     const updatePhoto = async(photo) => {
         photo.liked = photo.liked + 1
         await axios.put(`http://localhost:9080/photos/${photo._id}`, photo)
@@ -47,8 +43,7 @@ export default function Photos() {
             <div key={_id} className='photoDiv'>
                 <h3 className=''>{photo.title}</h3>
                 <img className='photo' src={require(`../../${photo.photoSrc}`)} alt={photo.title} onClick={() => handlePhotoModal(photo)}></img>
-                <button onClick={() => likePhoto(photo)}><FcLike /></button>
-                <button onClick={() => updatePhoto(photo)}><FcLike /> Liked {photo.liked} times</button>
+                <button onClick={() => updatePhoto(photo)}><FcLike /></button>
                 <button onClick={() => addToCart(photo)}><BsFillCartPlusFill/></button>
             </div>
         ))}

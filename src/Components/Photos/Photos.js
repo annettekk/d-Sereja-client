@@ -4,13 +4,9 @@ import axios from "axios"
 import { FcLike } from "react-icons/fc";
 import { BsFillCartPlusFill } from "react-icons/bs";
 
-
-
-import "../.././"
-
 export default function Photos() {
     const[photos, setPhotos] = useState([])
-    
+
     useEffect(() => {
         getPhotos()
     })
@@ -30,6 +26,11 @@ export default function Photos() {
         console.log(`photo with id ${photo._id} has been liked`)
     }
 
+    const updatePhoto = async(photo) => {
+        photo.liked = photo.liked + 1
+        await axios.put(`http://localhost:9080/photos/${photo._id}`, photo)
+    }
+
     function addToCart(photo){
         console.log(`Photo ${photo.title} has been added to cart`)
     }
@@ -47,6 +48,7 @@ export default function Photos() {
                 <h3 className=''>{photo.title}</h3>
                 <img className='photo' src={require(`../../${photo.photoSrc}`)} alt={photo.title} onClick={() => handlePhotoModal(photo)}></img>
                 <button onClick={() => likePhoto(photo)}><FcLike /></button>
+                <button onClick={() => updatePhoto(photo)}><FcLike /> Liked {photo.liked} times</button>
                 <button onClick={() => addToCart(photo)}><BsFillCartPlusFill/></button>
             </div>
         ))}

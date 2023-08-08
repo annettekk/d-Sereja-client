@@ -2,7 +2,7 @@ import React from "react";
 import "./CartModal.css";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
-export default function CartModal({ closeCartModal }) {
+export default function CartModal({ closeCartModal, addToCart }) {
   return (
     <div className="cartItems closed">
       <div className="itemContainer">
@@ -14,3 +14,5 @@ export default function CartModal({ closeCartModal }) {
     </div>
   );
 }
+
+//`Photo ${photo.title} has been added to cart`

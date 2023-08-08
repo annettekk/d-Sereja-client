@@ -1,7 +1,6 @@
 import React from "react";
 import "./CartModal.css";
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import "./Photos/Photos.js";
 
 export default function CartModal({ closeCartModal }) {
   return (

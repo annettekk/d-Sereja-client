@@ -1,4 +1,5 @@
 .hero-image {
-  width: 60%;
-  height: 50%;
+  width: 70vw;
+  position: fixed;
+  border-radius: 8px;
 }

@@ -7,13 +7,37 @@ import Home from "./Pages/Home/Home"
 import About from "./Pages/About/About"
 import Contact from "./Pages/Contact/Contact"
 import Gallery from "./Pages/Gallery/Gallery"
+import CartModal from "./Components/CartModal/CartModal"
+import { useState } from 'react';
 
 function App() {
+  
+  const [modal, setModal] = useState(false);
+
+    function handleModal() {
+      setModal(!modal);
+    }
+
+    function closeModal() {
+      setModal(!modal);
+    }
+  
+    const [cartModal, setcartModal] = useState(false);
+
+    function handleCartModal() {
+      setcartModal(!cartModal);
+    }
+
+    function closeCartModal() {
+      setcartModal(!cartModal);
+    }
+
   return (
-    <>
-      <BrowserRouter>
+    
+          <BrowserRouter>
         <div className="App">
-          <Header></Header>
+          <Header handleCartModal={handleCartModal}></Header>
+          {cartModal && <CartModal closeCartModal={closeCartModal}/>}
           <Routes>
             <Route path="/" element={<Home/>}></Route>
             <Route path="/about" element={<About/>}></Route>
@@ -23,8 +47,9 @@ function App() {
           <Footer></Footer>
         </div>
       </BrowserRouter>
-    </>
+    
   );
 }
+
 
 export default App;

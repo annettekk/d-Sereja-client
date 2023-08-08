@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Header() {
+
+export default function Header({handleCartModal}) {
+  
   return (
-    <>
+    
     <header>
         <h1>Jaga Galganek Photography</h1>
         <nav>
@@ -16,9 +18,8 @@ export default function Header() {
           </ul>
         </nav>
         <div>Login placeholder</div>
-        <div>Cart placeholder</div>
+        <button onClick={() => handleCartModal()}></button>
+        
       </header>
-    </>
   )
 }
-

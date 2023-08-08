@@ -1,7 +1,8 @@
 import React from "react";
 import "./Home.css";
 import { Helmet } from "react-helmet-async";
-// import Hero-home.jpg from "./Hero-home";
+
+import HeroHome from "../../Images/HeroHome.jpg";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       </Helmet>
       <main>
         <h2>Home Page</h2>
-        <img className="hero-image" src={Hero - home.jpg} />
+        <img className="hero-image" src={HeroHome} alt="Hero Image" />
       </main>
     </>
   );

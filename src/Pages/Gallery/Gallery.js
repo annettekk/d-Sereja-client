@@ -1,6 +1,7 @@
 import React from "react";
 import "./Gallery.css";
 import { Helmet } from "react-helmet-async";
+import Photos from "../../Components/Photos/Photos";
 
 export default function Gallery() {
   return (
@@ -12,7 +13,10 @@ export default function Gallery() {
         content="This is the gallery page for Jaga Galganek's Photography Portfoilio"/>
         <link rel="canonical" href="/gallery"/>
       </Helmet>
-      <div>Gallery</div>
+      <main>
+        <h2>Gallery</h2>
+        <Photos/>
+      </main>
     </>
   )
 }

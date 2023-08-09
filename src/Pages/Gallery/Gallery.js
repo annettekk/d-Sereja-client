@@ -36,8 +36,6 @@ export default function Gallery({ addToCart }) {
       <main>
         <h2>Gallery</h2>
         <Photos addToCart={addToCart} handlePhotoModal={handlePhotoModal}/>
-        {/* <PhotoModal /> */}
-         {/* <PhotoModal closePhotoModal={closePhotoModal} photoModalContent={photoModalContent} />  */}
          {photoModal && <PhotoModal photoModalContent={photoModalContent} closePhotoModal={closePhotoModal}/>} 
       </main>
     </>

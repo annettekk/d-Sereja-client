@@ -4,10 +4,11 @@ import { Helmet } from "react-helmet-async";
 import axios from "axios";
 import { AiFillDelete } from "react-icons/ai";
 import { MdFavorite, MdOutlineFavoriteBorder } from "react-icons/md";
+import { FcLike } from "react-icons/fc";
+import Profile from "../../Components/Profile/Profile";
+
 
 export default function Contact() {
-  const admin = ["Yaga ", "Jessica ", "Billie ", "Anna "];
-
   const [formData, setFormData] = useState({
     title: "",
     photoSrc: "",
@@ -91,7 +92,8 @@ export default function Contact() {
         <link rel="canonical" href="/contact" />
       </Helmet>
       <main>
-        <h2>Welcome {admin} to your admin page</h2>
+        
+        <h2>Admin Page</h2>
         <h3>Add Photo</h3>
         <form onSubmit={submit}>
           <legend>Photo Details</legend>
@@ -154,6 +156,7 @@ export default function Contact() {
                 >
                   <AiFillDelete />
                 </button>
+                <p className="liked"> <FcLike /> {photo.liked}</p>
               </div>
             ))}
           </div>

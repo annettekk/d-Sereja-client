@@ -5,7 +5,6 @@ import { FcLike } from "react-icons/fc";
 import { BsFillCartPlusFill } from "react-icons/bs";
 
 
-
 export default function Photos({handlePhotoModal}) {
     const[photos, setPhotos] = useState([])
 
@@ -25,7 +24,6 @@ export default function Photos({handlePhotoModal}) {
     }
   
 
-
     const updatePhoto = async(photo) => {
         photo.liked = photo.liked + 1
         await axios.put(`http://localhost:9080/photos/${photo._id}`, photo)
@@ -33,24 +31,19 @@ export default function Photos({handlePhotoModal}) {
     }
 
     function addToCart(photo){
-        console.log(`Photo ${photo.title} has been added to cart`)
+        const shoppingCart = JSON.parse(localStorage.getItem("shoppingCart"))
+
+        if(shoppingCart){
+          let updateCart = []
+          updateCart = shoppingCart
+          updateCart.push(photo)
+          console.log(updateCart)
+          localStorage.setItem('shoppingCart', JSON.stringify(updateCart))
+        }else{
+          localStorage.setItem('shoppingCart', JSON.stringify([photo]))
+          console.log(`Photo ${photo.title} has been added to cart`)        
+        }
     }
-
-    // const [photoModal, setPhotoModal] = useState(false);
-    // const [photoModalContent, setPhotoModalContent] = useState({});
-
-    // function handlePhotoModal(photo){
-    //     console.log(`displaying larger photo of ${photo.title}`)
-    //     console.log(photoModal)
-    //     setPhotoModal(!photoModal);
-    //     console.log(photoModal)
-    //     setPhotoModalContent(photo);
-    // }
-
-    // function closePhotoModal() {
-    //     setPhotoModal(!photoModal);
-    //     setPhotoModalContent({});
-    //   }
 
   
   return (
@@ -64,7 +57,6 @@ export default function Photos({handlePhotoModal}) {
                 <button onClick={() => addToCart(photo)}><BsFillCartPlusFill/></button>
             </div>
         ))}
-        {/* {photoModal && <PhotoModal photoModalContent={photoModalContent} closePhotoModal={closePhotoModal}/>} */}
     </>
   );
 }

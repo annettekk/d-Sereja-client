@@ -1,0 +1,12 @@
+.cartPhoto{
+    width: 10vw;
+    padding: .2rem;
+}
+
+.cartItem{
+    display: flex;
+}
+
+.cartPhotoTitle{
+    font-size: 1rem;
+}

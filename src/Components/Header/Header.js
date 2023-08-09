@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { BiLogIn } from "react-icons/bi";
+import Login from "../Login/Login";
+import Logout from "../Logout/Logout";
+import Profile from "../Profile/Profile";
 
 export default function Header({ handleCartModal }) {
   return (
@@ -41,6 +44,14 @@ export default function Header({ handleCartModal }) {
       <button onClick={() => handleCartModal()}>
         <FiShoppingCart />
       </button>
+      <div className="Login">
+        <h1>Log In</h1>
+        <Login />
+        <Logout />
+      </div>
+      <div>
+        <Profile />
+      </div>
     </header>
   );
 }

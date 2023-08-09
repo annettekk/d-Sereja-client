@@ -5,12 +5,13 @@ import { FcLike } from "react-icons/fc";
 import { BsFillCartPlusFill } from "react-icons/bs";
 
 
-export default function Photos() {
+
+export default function Photos({handlePhotoModal}) {
     const[photos, setPhotos] = useState([])
 
     useEffect(() => {
         getPhotos()
-    })
+    }, [])
 
     async function getPhotos(){
         try{
@@ -28,28 +29,42 @@ export default function Photos() {
     const updatePhoto = async(photo) => {
         photo.liked = photo.liked + 1
         await axios.put(`http://localhost:9080/photos/${photo._id}`, photo)
+        getPhotos()
     }
 
     function addToCart(photo){
         console.log(`Photo ${photo.title} has been added to cart`)
     }
 
+    // const [photoModal, setPhotoModal] = useState(false);
+    // const [photoModalContent, setPhotoModalContent] = useState({});
 
-  function handlePhotoModal(photo) {
-    console.log(`displaying larger photo of ${photo.title}`);
-  }
+    // function handlePhotoModal(photo){
+    //     console.log(`displaying larger photo of ${photo.title}`)
+    //     console.log(photoModal)
+    //     setPhotoModal(!photoModal);
+    //     console.log(photoModal)
+    //     setPhotoModalContent(photo);
+    // }
 
+    // function closePhotoModal() {
+    //     setPhotoModal(!photoModal);
+    //     setPhotoModalContent({});
+    //   }
+
+  
   return (
     <>
         <div>Photos</div>
         {photos.map((photo, _id) => (
             <div key={_id} className='photoDiv'>
                 <h3 className=''>{photo.title}</h3>
-                <img className='photo' src={require(`../../${photo.photoSrc}`)} alt={photo.title} onClick={() => handlePhotoModal(photo)}></img>
+                <img className='photo' src={require(`../../${photo.photoSrc}`)} alt={photo.title} onClick={() => handlePhotoModal(photo)}></img> 
                 <button onClick={() => updatePhoto(photo)}><FcLike /></button>
                 <button onClick={() => addToCart(photo)}><BsFillCartPlusFill/></button>
             </div>
         ))}
+        {/* {photoModal && <PhotoModal photoModalContent={photoModalContent} closePhotoModal={closePhotoModal}/>} */}
     </>
   );
 }

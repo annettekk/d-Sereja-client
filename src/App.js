@@ -11,15 +11,6 @@ import CartModal from "./Components/CartModal/CartModal";
 import { useState } from "react";
 
 function App() {
-  // const [modal, setModal] = useState(false);
-
-  // function handleModal() {
-  //   setModal(!modal);
-  // }
-
-  // function closeModal() {
-  //   setModal(!modal);
-  // }
 
   const [cartModal, setcartModal] = useState(false);
 
@@ -31,23 +22,19 @@ function App() {
     setcartModal(!cartModal);
   }
 
-  function addToCart(photo) {
-    console.log('phooto')
-  }
-
   return (
     <BrowserRouter>
       <div className="App">
         <Header handleCartModal={handleCartModal}></Header>
         {cartModal && (
-          <CartModal closeCartModal={closeCartModal} addToCart={addToCart} />
+          <CartModal closeCartModal={closeCartModal} />
         )}
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route
             path="/gallery"
-            element={<Gallery addToCart={addToCart} />}
+            element={<Gallery  />}
           ></Route>
           <Route path="/admin" element={<Admin />}></Route>
         </Routes>

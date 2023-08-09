@@ -31,7 +31,9 @@ export default function Header({ handleCartModal }) {
           </li>
           {user &&
             (user.email === process.env.REACT_APP_EMAIL ||
-              user.email === process.env.REACT_APP_EMAIL2) && (
+              user.email === process.env.REACT_APP_EMAIL2 ||
+              user.email === process.env.REACT_APP_EMAIL3 ||
+              user.email === process.env.REACT_APP_EMAIL4) && (
               <li className="navLi">
                 <Link className="link" to="/admin">
                   Admin

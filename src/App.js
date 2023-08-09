@@ -11,15 +11,15 @@ import CartModal from "./Components/CartModal/CartModal";
 import { useState } from "react";
 
 function App() {
-  const [modal, setModal] = useState(false);
+  // const [modal, setModal] = useState(false);
 
-  function handleModal() {
-    setModal(!modal);
-  }
+  // function handleModal() {
+  //   setModal(!modal);
+  // }
 
-  function closeModal() {
-    setModal(!modal);
-  }
+  // function closeModal() {
+  //   setModal(!modal);
+  // }
 
   const [cartModal, setcartModal] = useState(false);
 
@@ -31,7 +31,9 @@ function App() {
     setcartModal(!cartModal);
   }
 
-  function addToCart(photo) {}
+  function addToCart(photo) {
+    console.log('phooto')
+  }
 
   return (
     <BrowserRouter>

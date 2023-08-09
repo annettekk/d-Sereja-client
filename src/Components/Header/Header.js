@@ -29,13 +29,15 @@ export default function Header({ handleCartModal }) {
               Gallery
             </Link>
           </li>
-          {user && user.email === process.env.REACT_APP_EMAIL && (
-            <li className="navLi">
-              <Link className="link" to="/admin">
-                Admin
-              </Link>
-            </li>
-          )}
+          {user &&
+            (user.email === process.env.REACT_APP_EMAIL ||
+              user.email === process.env.REACT_APP_EMAIL2) && (
+              <li className="navLi">
+                <Link className="link" to="/admin">
+                  Admin
+                </Link>
+              </li>
+            )}
         </ul>
       </nav>
       <button onClick={() => handleCartModal()}>

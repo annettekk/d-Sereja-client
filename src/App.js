@@ -5,7 +5,7 @@ import Footer from "./Components/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
-import Contact from "./Pages/Contact/Contact";
+import Admin from "./Pages/Admin/Admin";
 import Gallery from "./Pages/Gallery/Gallery";
 import CartModal from "./Components/CartModal/CartModal";
 import { useState } from "react";
@@ -47,7 +47,7 @@ function App() {
             path="/gallery"
             element={<Gallery addToCart={addToCart} />}
           ></Route>
-          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/admin" element={<Admin />}></Route>
         </Routes>
         <Footer></Footer>
       </div>

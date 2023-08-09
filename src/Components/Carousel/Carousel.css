@@ -1,0 +1,17 @@
+.scroll {
+    display: 'flex';
+    overflow: 'auto';
+    scroll-snap-type: 'x mandatory'
+}
+
+.carousel-item {
+    background-color: 'aqua';
+    font-size: '50px';
+    width: '250px';
+    height: '250px';
+    flex-shrink: 0;
+    color: '#fff';
+    display: 'flex';
+    justify-content: 'center';
+    align-items: 'center'
+}

@@ -1,0 +1,16 @@
+.displayPhotos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photoToDelete{
+    padding: .5rem;
+    border: 2px solid black;
+    width: 20vw;
+    height: auto;
+    margin: 1rem;
+}
+.photoDelete{
+    width: 20vw;
+    height: auto;
+}

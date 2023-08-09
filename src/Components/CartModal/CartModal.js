@@ -1,31 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./CartModal.css";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { BsFillCartDashFill } from "react-icons/bs";
 
 
 export default function CartModal({ closeCartModal }) {
-  let currentShoppingCart = JSON.parse(localStorage.getItem('shoppingCart'))
-  
+  const [cart, setCart] = useState([])
 
-  function removeFromCart(photo){
-    console.log("removing")
-    let updateCart = []
-    updateCart = currentShoppingCart
-    updateCart.pop(photo)
-    localStorage.setItem('shoppingCart', JSON.stringify(updateCart))
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem('shoppingCart'));
+    setCart(data)
+    console.log(data)
+  }, [])
+
+
+  const deleteFromCart = value => {
+    setCart(oldValues => {
+      const newValues = oldValues.filter(photo => photo !== value)
+      localStorage.setItem('shoppingCart', JSON.stringify(newValues))
+      return newValues
+    })
   }
+
+  
 
   return (
     <div className="cartItems closed">
       <div className="itemContainer">
         Your Cart
-        {!currentShoppingCart && <p>Your cart is empty</p>}        
-        {currentShoppingCart && currentShoppingCart.map((photo, _id) =>(
+        {!cart && <p>Your cart is empty</p>}        
+        {cart && cart.map((photo, _id) =>(
           <div className="cartItem" key={_id}>
             <img className="cartPhoto" alt={photo.title} src={require(`../../${photo.photoSrc}`)}></img>
             <p className="cartPhotoTitle">Photo Name: {photo.title}</p>
-            <button onClick={() => (removeFromCart(photo))}><BsFillCartDashFill/></button>
+            <button onClick={() => (deleteFromCart(photo))}><BsFillCartDashFill/></button>
           </div>
         ))}
         <span className="cross" onClick={closeCartModal}>

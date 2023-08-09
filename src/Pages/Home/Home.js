@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Jaga Galganek Photography Home Page</title>
+        <head className="title">Jaga Galganek Photography Home Page</head>
         <meta
           name="description"
           content="This is the home page for Jaga Galganek's Photography Portfoilio"

@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC");
-@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bricolage+Grotesque");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@900&display=swap");
 
 * {
-  /* background-color: #d7dbd7; */
   box-sizing: border-box;
 }
 
@@ -18,7 +19,13 @@ body {
 h1 {
   font-size: 3rem;
   color: #4c6942;
-  font-weight: 600;
+  font-weight: 900;
+  font-family: "Vesper Libre";
+  /* font-style: italic; */
+  /* letter-spacing: 1.5px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* font-style: bold; */
 }
 
 h2 {
@@ -48,7 +55,7 @@ main {
   padding: 1rem;
 }
 
-button{
+button {
   border: solid 1px black;
-  margin: .1rem;
+  margin: 0.1rem;
 }

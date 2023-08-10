@@ -43,3 +43,8 @@ h4 {
 main {
   padding: 1rem;
 }
+
+button{
+  border: solid 1px black;
+  margin: .1rem;
+}

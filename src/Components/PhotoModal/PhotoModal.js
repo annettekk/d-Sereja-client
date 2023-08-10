@@ -1,7 +1,6 @@
 import React from "react";
 import "./PhotoModal.css";
 
-
 export default function photoModal({ photoModalContent, closePhotoModal }) {
   console.log(photoModalContent.photoSrc)
   console.log(photoModalContent.title)
@@ -12,8 +11,6 @@ export default function photoModal({ photoModalContent, closePhotoModal }) {
         X
         </span>
         <img className='selectedPhoto' src={require(`../../${photoModalContent.photoSrc}`)} alt={photoModalContent.title} />
-        
-        
       </div>
     </>
   )

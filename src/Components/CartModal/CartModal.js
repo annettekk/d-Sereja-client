@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./CartModal.css";
 import { BsFillCartDashFill } from "react-icons/bs";
+import Profile from "../Profile/Profile";
 
 
 export default function CartModal({ closeCartModal }) {
@@ -30,6 +31,7 @@ export default function CartModal({ closeCartModal }) {
             X
           </span>
           <h3>Cart</h3>
+          <Profile/>
           {!cart && <p>Your cart is empty</p>}        
           {cart && cart.map((photo, _id) =>(
             <div className="cartItem" key={_id}>

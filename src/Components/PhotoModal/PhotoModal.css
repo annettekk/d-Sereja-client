@@ -16,26 +16,28 @@
   border: 5px solid black;
 }
 
-.closeButton {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background-color: transparent;
-  font-size: 1.5rem;
-  cursor: pointer;
-  border: 1px solid black;
-  padding: 0.3rem;
-  border-radius: 1rem;
+.closeButton{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: .3rem;
+    border-radius: 1rem;
 }
-.closeButton:hover {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background-color: transparent;
-  font-size: 1.5rem;
-  cursor: pointer;
-  border: 1px solid white;
-  padding: 0.3rem;
-  border-radius: 1rem;
-  color: white;
+
+.closeButton:hover{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: .3rem;
+    border-radius: 1rem;
+    background-color: #4c6942;
 }
+

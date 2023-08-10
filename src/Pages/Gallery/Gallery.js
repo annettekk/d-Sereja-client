@@ -31,7 +31,7 @@ export default function Gallery({ addToCart }) {
         <link rel="canonical" href="/gallery" />
       </Helmet>
       <main>
-        <h2>Gallery</h2>
+        <h2 className="galleryHeader">Gallery</h2>
         <Photos addToCart={addToCart} handlePhotoModal={handlePhotoModal}/>
         {photoModal && <PhotoModal photoModalContent={photoModalContent} closePhotoModal={closePhotoModal}/>} 
       </main>

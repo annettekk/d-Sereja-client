@@ -17,7 +17,6 @@ export default function About() {
       </Helmet>
       <main>
         <div className="container">
-          <h2 className="about-header">About</h2>
           <div className="about-container">
             <img className="about-photo" src={aboutPhoto2} alt="Photographer" />
             <p className="aboutP">

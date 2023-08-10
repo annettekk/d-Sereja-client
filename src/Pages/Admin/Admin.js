@@ -87,7 +87,7 @@ export default function Contact() {
       <main>
         
         <h3>Add Photo</h3>
-        <form onSubmit={submit}>
+        <form className="form" onSubmit={submit}>
           <label className="labelText">Title</label>
           <input
             className="inputForm"
@@ -113,15 +113,15 @@ export default function Contact() {
             value={formData.model}
           ></input>
           <label className="labelText">Description</label>
-          <input
+          <textarea
             className="inputForm"
             name="desciption"
             placeholder="Please enter a description of the photo"
             onChange={handleChanges}
             value={formData.desciption}
-          ></input>
+          ></textarea>
           <button className="submitButton" type="submit">
-            submit
+            Add Photo
           </button>
         </form>
         <details className="deletePhotos">

@@ -1,16 +1,58 @@
 .displayPhotos{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .photoToDelete{
     padding: .5rem;
     border: 2px solid black;
-    width: 20vw;
     height: auto;
     margin: 1rem;
 }
 .photoDelete{
-    width: 20vw;
-    height: auto;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    padding: .4rem;
+}
+
+
+@media (min-width: 500px){
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 700px){
+    .gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+    
+
+@media (min-width: 900px){
+    .gallery{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.form{
+    padding: 1rem 3rem;
+    display: grid;
+}
+
+.labelText{
+    padding: .3rem 1rem;
+}
+
+.inputForm{
+    background-color: #4c694233;
+}
+
+.submitButton{
+    background-color: #4c6942;
+    color: whitesmoke;
+    padding: .3rem;
+    width: 300px;
+    margin:  1rem auto;
 }

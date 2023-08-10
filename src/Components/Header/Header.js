@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import Login from "../Login/Login";
 import Logout from "../Logout/Logout";
-import Profile from "../Profile/Profile";
 import { useAuth0 } from "@auth0/auth0-react";
 import Burger from "../Burger/Burger";
 
@@ -13,9 +12,10 @@ export default function Header({ handleCartModal }) {
 
   return (
     <header>
+
       <div className="container">
+      <Burger />
         <h1>Jaga Galganek Photography</h1>
-        <Burger />
         <nav className="header-nav">
           <ul className="header-nav-list">
             <li className="navLi">
@@ -47,19 +47,16 @@ export default function Header({ handleCartModal }) {
           </ul>
         </nav>
 
-        <button onClick={() => handleCartModal()}>
+        <button className="cartButton" onClick={() => handleCartModal()}>
           <FiShoppingCart />
         </button>
-        <div className="Login">
+        <div className="login">
           {!user && (
             <div>
-              <Login />
+               <Login />
             </div>
           )}
-          {user && <Logout />}
-        </div>
-        <div>
-          <Profile />
+          {user &&  <Logout />}
         </div>
       </div>
     </header>

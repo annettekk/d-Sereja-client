@@ -4,7 +4,7 @@ import { FiLogIn } from "react-icons/fi";
 
 const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
-  return <FiLogIn onClick={() => loginWithRedirect()} />;
+  return <span onClick={() => loginWithRedirect()}>Login <FiLogIn onClick={() => loginWithRedirect()}/></span>
 };
 
 export default LoginButton;

@@ -6,11 +6,7 @@ const LogoutButton = () => {
   const { logout } = useAuth0();
 
   return (
-    <FiLogOut
-      onClick={() =>
-        logout({ logoutParams: { returnTo: window.location.origin } })
-      }
-    />
+    <span onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout <FiLogOut onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}/></span>
   );
 };
 

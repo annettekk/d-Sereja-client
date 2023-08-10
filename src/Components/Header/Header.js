@@ -16,7 +16,7 @@ export default function Header({ handleCartModal }) {
         <ul>
           <li className="navLi">
             <Link className="link" to="/">
-              Home
+              <p className="linkP">Home</p>
             </Link>
           </li>
           <li className="navLi">

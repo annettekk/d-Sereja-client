@@ -13,12 +13,13 @@
 .left-click {
   position: absolute;
   left: 1rem;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .right-click {
   position: absolute;
   right: 1rem;
-  font-size: 4rem;
-  color: palevioletred;
+  font-size: 2rem;
 }
+
+/* @media */

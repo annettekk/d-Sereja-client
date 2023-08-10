@@ -12,10 +12,9 @@ export default function Header({ handleCartModal }) {
 
   return (
     <header>
-
       <div className="container">
-      <Burger />
-        <h1>Jaga Galganek Photography</h1>
+        <Burger />
+        <h1>JAGA GALGANEK PHOTOGRAPHY</h1>
         <nav className="header-nav">
           <ul className="header-nav-list">
             <li className="navLi">
@@ -53,10 +52,10 @@ export default function Header({ handleCartModal }) {
         <div className="login">
           {!user && (
             <div>
-               <Login />
+              <Login />
             </div>
           )}
-          {user &&  <Logout />}
+          {user && <Logout />}
         </div>
       </div>
     </header>

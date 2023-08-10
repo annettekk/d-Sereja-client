@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+
 .link {
   color: #3d3b51;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 600;
+  font-family: "Cutive Mono";
 }
 
 .link:hover {
@@ -13,38 +16,41 @@
 .header-nav {
   display: none;
   word-spacing: 2rem;
+  font-family: "Curtive Mono";
 }
 
 .header-nav-list {
+  font-family: "Curtive Mono";
   display: flex;
   justify-content: space-between;
 }
 
 .navLi {
   margin-right: 1rem;
+  font-family: "Curtive Mono";
 }
 
 @media (min-width: 800px) {
   .header-nav {
     display: block;
+    font-family: "Curtive Mono";
   }
 }
 
-.login{
+.login {
   position: absolute;
   top: 0;
   right: 0;
   cursor: pointer;
 }
 
-.cartButton{
+.cartButton {
   position: relative;
   float: right;
   background-color: #d7dbd7;
-
 }
 
-.cartButton:hover{
+.cartButton:hover {
   position: relative;
   cursor: pointer;
   float: right;

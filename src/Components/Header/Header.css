@@ -17,6 +17,7 @@
   display: none;
   word-spacing: 2rem;
   font-family: "Curtive Mono";
+  padding-top: 1rem;
 }
 
 .header-nav-list {
@@ -57,8 +58,6 @@
 }
 
 .cartButton:hover {
-  position: relative;
   cursor: pointer;
-  float: right;
   background-color: #4c6942;
 }

@@ -1,0 +1,32 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerName {
+  font-size: 1rem;
+  color: #4c6942;
+  margin-left: 2rem;
+}
+.icons {
+  font-size: 1.5rem;
+  color: #4c6942;
+  margin-right: 2rem;
+}
+
+.bh {
+  color: #4c6942;
+}
+
+.bh:hover {
+  color: black;
+}
+
+.ins {
+  color: #4c6942;
+}
+
+.ins:hover {
+  color: black;
+}

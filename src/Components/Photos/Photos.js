@@ -48,6 +48,7 @@ export default function Photos({handlePhotoModal}) {
   
   return (
     <>
+      <div className="gallery">
         {photos.map((photo, _id) => (
             <div key={_id} className='photoDiv'>
                 <h3 className=''>{photo.title}</h3>
@@ -56,6 +57,7 @@ export default function Photos({handlePhotoModal}) {
                 <button onClick={() => addToCart(photo)}><BsFillCartPlusFill/></button>
             </div>
         ))}
+      </div>
     </>
   );
 }

@@ -35,7 +35,7 @@ export default function Carousel() {
           //   alignItems: "center",
           // }}
         >
-          <img src={photo} alt="model" />
+          <img className="carouselPhoto" src={photo} alt="model" />
         </li>
       ))}
     </ul>

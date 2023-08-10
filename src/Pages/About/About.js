@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 export default function About() {
   return (
     <>
-      <div class="container">
         <Helmet>
           <title>Jaga Galganek Photography About Page</title>
           <meta
@@ -16,11 +15,9 @@ export default function About() {
           />
           <link rel="canonical" href="/about" />
         </Helmet>
-        <div>
+        <main>
           <h2 className="about-header">About</h2>
-
-          <img className="about-photo2" src={aboutPhoto2} alt="About photo 2" />
-
+          <img className="about-photo" src={aboutPhoto2} alt="Photographer" />
           <p className="aboutP">
             Jaga is a Polish film photographer, based in Suffolk, UK. She shoots
             film since her teenage years. Her first camera was soviet Zenit-E.
@@ -41,8 +38,8 @@ export default function About() {
             Occasionally, even a subtle element may emerge, subtly unsettling
             the viewer, perhaps even evoking a sense of foreboding.
           </p>
-          <h2 className="equipment">Equipment</h2>
-          <p className="aboutP">
+          <h3 className="equipment">Equipment</h3>
+          <p className="equipmentP">
             Navigating the realms of film, Jaga wields the Pentax ME Super and
             Pentax 6x7 as her creative companions. With the ME Super, she dances
             between hues, capturing life in vivid colors while honing her focus
@@ -53,30 +50,28 @@ export default function About() {
             to film crafts timeless tales, each click an ode to enduring
             artistry
           </p>
-        </div>
 
-        <h3>Featured in:</h3>
-        <ul>
-          <li>
-            <Link to="https://www.vogue.com/photovogue/photographers/207945">
-              Vogue
-            </Link>
-          </li>
-          <li>
-            <Link to="https://www.lomography.com/magazine/">
-              Lomography Interview
-            </Link>
-          </li>
-          <li>
-            <Link to="https://www.instagram.com/international.film.swap.group/?hl=en">
-              International Film Swap
-            </Link>
-          </li>
-        </ul>
-
-        <h2 className="contact">Contact</h2>
+          <h3>Featured in:</h3>
+          <ul className="featuredUl">
+            <li className="featuredLi">
+              <Link to="https://www.vogue.com/photovogue/photographers/207945">
+                Vogue
+              </Link>
+            </li>
+            <li className="featuredLi">
+              <Link to="https://www.lomography.com/magazine/">
+                Lomography Interview
+              </Link>
+            </li>
+            <li className="featuredLi">
+              <Link to="https://www.instagram.com/international.film.swap.group/?hl=en">
+                International Film Swap
+              </Link>
+            </li>
+          </ul>
+        <h3 className="contact">Contact</h3>
         <p className="email">jagagalganek@gmail.com</p>
-      </div>
+      </main>
     </>
   );
 }

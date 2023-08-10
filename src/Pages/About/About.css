@@ -1,15 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC");
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans");
 
-.about-header {
-  margin-top: 10px;
-  margin-left: 2rem;
-  display: inline;
-  font-size: xx-large;
-  font-family: "Playfair Display SC";
-  color: #4c6942;
-  letter-spacing: normal;
-}
 
 .about-photo {
   display: flex;
@@ -24,6 +15,22 @@
 .aboutP {
   display: flex;
   vertical-align: right;
+  width: 90%;
+  margin-left: 2rem;
+  margin-bottom: 10px;
+  padding: 7px;
+  line-height: 118%;
+  border-radius: 10px;
+  text-align: left;
+  font-family: "Alegreya Sans";
+  background-color: #ababab;
+  background-size: cover;
+}
+
+
+.equipmentP {
+  display: flex;
+  vertical-align: right;
   width: 60%;
   margin-left: 2rem;
   margin-bottom: 10px;
@@ -36,14 +43,11 @@
   background-size: cover;
 }
 
-.equipment {
-  margin-left: 2rem;
-  font-weight: 200;
-  font-size: x-large;
-  margin-bottom: 7px;
-  margin-top: 12px;
-  color: #4c6942;
+.featuredLi{
+  padding: .2rem;
+  margin: .2rem;
 }
+
 
 /* .side-content-center {
   background-color: #40513b;

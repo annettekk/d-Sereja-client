@@ -10,7 +10,6 @@ export default function CartModal({ closeCartModal }) {
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem('shoppingCart'));
     setCart(data)
-    console.log(data)
   }, [])
 
 
@@ -30,9 +29,10 @@ export default function CartModal({ closeCartModal }) {
           <span className="closeButton" onClick={closeCartModal}>
             X
           </span>
-          <h3>Cart</h3>
           <Profile/>
-          {!cart && <p>Your cart is empty</p>}        
+          <h2>Your Cart</h2>
+          {!cart && <p className="emptyCart">Your cart is empty</p>} 
+          {cart.length === 0 && <p className="emptyCart">Your cart is empty</p>} 
           {cart && cart.map((photo, _id) =>(
             <div className="cartItem" key={_id}>
               <img className="cartPhoto" alt={photo.title} src={require(`../../${photo.photoSrc}`)}></img>
@@ -40,7 +40,6 @@ export default function CartModal({ closeCartModal }) {
               <button className="deleteCartItem" onClick={() => (deleteFromCart(photo))}><BsFillCartDashFill/></button>
             </div>
           ))}
-
         </div>
       </div>
   );

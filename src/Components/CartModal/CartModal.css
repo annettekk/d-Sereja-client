@@ -54,3 +54,12 @@
     transform: translateY(4px);
 
 }
+
+.emptyCart{
+    text-align: center;    
+}
+
+
+.cart h3{
+    text-align: center;
+}

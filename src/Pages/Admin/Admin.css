@@ -50,9 +50,38 @@
 }
 
 .submitButton{
+    background-color: #4c69425e;
+    color: whitesmoke;
+    padding: .3rem;
+    width: 300px;
+    margin:  1rem auto;
+    transition: .5s;
+}
+
+.submitButton:hover{
     background-color: #4c6942;
     color: whitesmoke;
     padding: .3rem;
     width: 300px;
     margin:  1rem auto;
+}
+
+.likeButton:hover{
+    background-color: #4c694247 ;
+}
+
+.addToCart:hover{
+    background-color: #4c694247 ;
+
+}
+
+.likeButton:active{
+    background-color: #4c6942 ;
+    transform: translateY(4px);
+
+}
+
+.addToCart:active{
+    background-color: #4c6942 ;
+    transform: translateY(4px);
 }

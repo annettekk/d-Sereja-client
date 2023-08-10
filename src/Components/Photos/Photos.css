@@ -14,7 +14,7 @@
     height: 400px;
     object-fit: cover;
     padding: .4rem;
-
+    cursor: pointer;
 }
 
 @media (min-width: 500px){
@@ -35,3 +35,21 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+.niceButton{
+    background-color: transparent;
+    transition: 0.5s;
+    cursor: pointer;
+    border: none;
+}
+
+.niceButton:hover{
+    background-color: #4c694247 ;
+}
+
+.niceButton:active{
+    background-color: #4c6942 ;
+    transform: translateY(4px);
+
+}
+

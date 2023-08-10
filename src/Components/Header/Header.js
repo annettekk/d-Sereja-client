@@ -6,6 +6,7 @@ import Login from "../Login/Login";
 import Logout from "../Logout/Logout";
 import Profile from "../Profile/Profile";
 import { useAuth0 } from "@auth0/auth0-react";
+import Burger from "../Burger/Burger";
 
 export default function Header({ handleCartModal }) {
   const { user } = useAuth0();
@@ -14,7 +15,8 @@ export default function Header({ handleCartModal }) {
     <header>
       <div className="container">
         <h1>Jaga Galganek Photography</h1>
-        <nav>
+        <Burger />
+        <nav className="header-nav">
           <ul className="header-nav-list">
             <li className="navLi">
               <Link className="link" to="/">
@@ -44,6 +46,7 @@ export default function Header({ handleCartModal }) {
               )}
           </ul>
         </nav>
+
         <button onClick={() => handleCartModal()}>
           <FiShoppingCart />
         </button>

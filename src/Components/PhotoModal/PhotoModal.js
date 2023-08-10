@@ -8,11 +8,12 @@ export default function photoModal({ photoModalContent, closePhotoModal }) {
   return (
     <>
       <div className="selectedPhotoContainer">
-        <img className='selectedPhoto' src={require(`../../${photoModalContent.photoSrc}`)} alt={photoModalContent.title} />
-        
-        <span className="closeButton" onClick={closePhotoModal}>
+      <span className="closeButton" onClick={closePhotoModal}>
         X
         </span>
+        <img className='selectedPhoto' src={require(`../../${photoModalContent.photoSrc}`)} alt={photoModalContent.title} />
+        
+        
       </div>
     </>
   )

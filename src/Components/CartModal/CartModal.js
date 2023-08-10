@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./CartModal.css";
-import { AiOutlineCloseCircle } from "react-icons/ai";
 import { BsFillCartDashFill } from "react-icons/bs";
 
 
@@ -25,21 +24,22 @@ export default function CartModal({ closeCartModal }) {
   
 
   return (
-    <div className="cartItems closed">
       <div className="itemContainer">
-        Your Cart
-        {!cart && <p>Your cart is empty</p>}        
-        {cart && cart.map((photo, _id) =>(
-          <div className="cartItem" key={_id}>
-            <img className="cartPhoto" alt={photo.title} src={require(`../../${photo.photoSrc}`)}></img>
-            <p className="cartPhotoTitle">Photo Name: {photo.title}</p>
-            <button onClick={() => (deleteFromCart(photo))}><BsFillCartDashFill/></button>
-          </div>
-        ))}
-        <span className="closeButton" onClick={closeCartModal}>
-          <AiOutlineCloseCircle />
-        </span>
+        <div className="cart">
+          <span className="closeButton" onClick={closeCartModal}>
+            X
+          </span>
+          <h3>Cart</h3>
+          {!cart && <p>Your cart is empty</p>}        
+          {cart && cart.map((photo, _id) =>(
+            <div className="cartItem" key={_id}>
+              <img className="cartPhoto" alt={photo.title} src={require(`../../${photo.photoSrc}`)}></img>
+              <p className="cartPhotoTitle">Photo Name: {photo.title}</p>
+              <button onClick={() => (deleteFromCart(photo))}><BsFillCartDashFill/></button>
+            </div>
+          ))}
+
+        </div>
       </div>
-    </div>
   );
 }

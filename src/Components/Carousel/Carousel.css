@@ -22,4 +22,18 @@
   font-size: 2rem;
 }
 
+.left-click:hover {
+  position: absolute;
+  left: 1rem;
+  font-size: 2rem;
+  color: #4c6942;
+}
+
+.right-click:hover {
+  position: absolute;
+  right: 1rem;
+  font-size: 2rem;
+  color: #4c6942;
+}
+
 /* @media */

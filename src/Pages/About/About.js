@@ -43,33 +43,32 @@ export default function About() {
           </div>
           <h3 className="equipment">Equipment</h3>
           <p className="equipmentP">
-            Navigating the realms of film, Jaga wields the Pentax ME Super and
-            Pentax 6x7 as her creative companions. With the ME Super, she dances
-            between hues, capturing life in vivid colors while honing her focus
-            with its seamless blend of manual finesse and automatic ease. The
-            6x7 elevates her art further, embracing medium format grandeur for
-            unmatched clarity and range. Through this gear, grain becomes her
-            symphony, adding depth to each frame. In a digital age, her devotion
-            to film crafts timeless tales, each click an ode to enduring
-            artistry
+            Navigating the realms of film photography, Jaga wields the Pentax ME
+            Super and Pentax 6x7 as her creative companions. With the ME Super,
+            she dances between hues, capturing life in vivid colors while honing
+            her focus with its seamless blend of manual finesse and automatic
+            ease. The 6x7 elevates her art further, embracing medium format
+            grandeur for unmatched clarity and range. Through this gear, grain
+            becomes her symphony, adding depth to each frame. In a digital age,
+            her devotion to film crafts timeless tales, each click an ode to
+            enduring artistry
           </p>
-
-          <h3>Featured in:</h3>
+          <h3>Featured in</h3>
           <ul className="featuredUl">
             <li className="featuredLi">
-              <Link to="https://www.vogue.com/photovogue/photographers/207945">
+              <a href="https://www.vogue.com/photovogue/photographers/207945">
                 Vogue
-              </Link>
+              </a>
             </li>
             <li className="featuredLi">
-              <Link to="https://www.lomography.com/magazine/">
+              <a href="https://www.lomography.com/magazine/">
                 Lomography Interview
-              </Link>
+              </a>
             </li>
             <li className="featuredLi">
-              <Link to="https://www.instagram.com/international.film.swap.group/?hl=en">
+              <a href="https://www.instagram.com/international.film.swap.group/?hl=en">
                 International Film Swap
-              </Link>
+              </a>
             </li>
           </ul>
           <h3 className="contact">Contact</h3>

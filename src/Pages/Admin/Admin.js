@@ -5,8 +5,6 @@ import axios from "axios";
 import { AiFillDelete } from "react-icons/ai";
 import { MdFavorite, MdOutlineFavoriteBorder } from "react-icons/md";
 import { FcLike } from "react-icons/fc";
-import Profile from "../../Components/Profile/Profile";
-
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -17,7 +15,6 @@ export default function Contact() {
   });
 
   const handleChanges = (e) => {
-    console.log("changing" + e);
     e.preventDefault();
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -30,7 +27,7 @@ export default function Contact() {
 
   async function getPhotos() {
     try {
-      let API = "http://localhost:9080/photos";
+      let API = "https://analogue-film.onrender.com/photos";
       const result = await axios.get(API);
       setPhotos([]);
       setPhotos(result.data);
@@ -40,20 +37,18 @@ export default function Contact() {
   }
 
   const deletePhoto = async (photo) => {
-    console.log(`${photo} bring deleted`);
-    await axios.delete(`http://localhost:9080/photos/${photo._id}`);
+    await axios.delete(`https://analogue-film.onrender.com/photos/${photo._id}`);
     getPhotos();
   };
 
   const submit = (event) => {
     event.preventDefault();
-    console.log("Add Photo");
     handleAddPhoto(formData);
   };
 
   const handleAddPhoto = async (newPhoto) => {
     try {
-      let API = `http://localhost:9080/photos`;
+      let API = `https://analogue-film.onrender.com/photos`;
       const result = await axios.post(API, newPhoto);
       setPhotos([...photos, result.data]);
       setFormData({
@@ -68,16 +63,14 @@ export default function Contact() {
   };
 
   const makeFave = async (photo) => {
-    console.log(`${photo.title} bring wll be faved`);
     photo.faved = !photo.faved;
-    await axios.put(`http://localhost:9080/photos/${photo._id}`, photo);
+    await axios.put(`https://analogue-film.onrender.com/photos/${photo._id}`, photo);
     getPhotos();
   };
 
   const unFave = async (photo) => {
-    console.log(`${photo.title} bring wll be unfaved`);
     photo.faved = !photo.faved;
-    await axios.put(`http://localhost:9080/photos/${photo._id}`, photo);
+    await axios.put(`https://analogue-film.onrender.com/photos/${photo._id}`, photo);
     getPhotos();
   };
 
@@ -93,33 +86,35 @@ export default function Contact() {
       </Helmet>
       <main>
         
-        <h2>Admin Page</h2>
         <h3>Add Photo</h3>
         <form onSubmit={submit}>
-          <legend>Photo Details</legend>
-          <label>Title</label>
+          <label className="labelText">Title</label>
           <input
+            className="inputForm"
             name="title"
             placeholder="Please enter title of photo"
             onChange={handleChanges}
             value={formData.title}
           ></input>
-          <label>PhotoSrc</label>
+          <label className="labelText">PhotoSrc</label>
           <input
+            className="inputForm"
             name="photoSrc"
             placeholder="Please enter src of photo"
             onChange={handleChanges}
             value={formData.photoSrc}
           ></input>
-          <label>Model</label>
+          <label className="labelText">Model</label>
           <input
+            className="inputForm"
             name="model"
             placeholder="Please enter names of the model/s"
             onChange={handleChanges}
             value={formData.model}
           ></input>
-          <label>Description</label>
+          <label className="labelText">Description</label>
           <input
+            className="inputForm"
             name="desciption"
             placeholder="Please enter a description of the photo"
             onChange={handleChanges}

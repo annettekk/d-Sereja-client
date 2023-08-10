@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
 import { Helmet } from "react-helmet-async";
-// import HeroHome from "../../Images/HeroHome.jpg";
 import Carousel from "../../Components/Carousel/Carousel";
 
 export default function Home() {
@@ -16,8 +15,6 @@ export default function Home() {
         <link rel="canonical" href="/" />
       </Helmet>
       <main>
-        <h2>Home Page</h2>
-        {/* <img className="hero-image" src={HeroHome} alt="Hero" /> */}
         <Carousel />
       </main>
     </>

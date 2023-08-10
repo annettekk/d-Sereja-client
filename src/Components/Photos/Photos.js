@@ -14,7 +14,7 @@ export default function Photos({handlePhotoModal}) {
 
     async function getPhotos(){
         try{
-            let API = 'http://localhost:9080/photos'
+            let API = 'https://analogue-film.onrender.com/photos'
             const result = await axios.get(API)
             setPhotos([])
             setPhotos(result.data)
@@ -26,7 +26,7 @@ export default function Photos({handlePhotoModal}) {
 
     const updatePhoto = async(photo) => {
         photo.liked = photo.liked + 1
-        await axios.put(`http://localhost:9080/photos/${photo._id}`, photo)
+        await axios.put(`https://analogue-film.onrender.com/photos/${photo._id}`, photo)
         getPhotos()
     }
 
@@ -37,15 +37,12 @@ export default function Photos({handlePhotoModal}) {
           let updateCart = []
           updateCart = shoppingCart
           updateCart.push(photo)
-          console.log(updateCart)
           localStorage.setItem('shoppingCart', JSON.stringify(updateCart))
         }else{
           localStorage.setItem('shoppingCart', JSON.stringify([photo]))
-          console.log(`Photo ${photo.title} has been added to cart`)        
         }
     }
 
-  
   return (
     <>
       <div className="gallery">

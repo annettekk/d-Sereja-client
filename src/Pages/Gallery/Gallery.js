@@ -11,10 +11,7 @@ export default function Gallery({ addToCart }) {
   const [photoModalContent, setPhotoModalContent] = useState({});
 
   function handlePhotoModal(photo){
-      console.log(`displaying larger photo of ${photo.title}`)
-      console.log(photoModal)
       setPhotoModal(!photoModal);
-      console.log(photoModal)
       setPhotoModalContent(photo);
   }
 
@@ -36,7 +33,7 @@ export default function Gallery({ addToCart }) {
       <main>
         <h2>Gallery</h2>
         <Photos addToCart={addToCart} handlePhotoModal={handlePhotoModal}/>
-         {photoModal && <PhotoModal photoModalContent={photoModalContent} closePhotoModal={closePhotoModal}/>} 
+        {photoModal && <PhotoModal photoModalContent={photoModalContent} closePhotoModal={closePhotoModal}/>} 
       </main>
     </>
   );

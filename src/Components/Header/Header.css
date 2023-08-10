@@ -1,0 +1,12 @@
+.link {
+  color: #3d3b51;
+  text-decoration: none;
+}
+
+.header-nav-list {
+  display: flex;
+}
+
+.navLi {
+  margin-right: 1rem;
+}

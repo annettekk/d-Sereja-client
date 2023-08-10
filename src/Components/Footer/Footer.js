@@ -9,7 +9,7 @@ export default function Footer() {
     <>
       <footer className="footer">
         <h5 className="footerName">
-          Made with <GiHealthPotion /> by: Baba-Yaga Coding Team
+          Made with <GiHealthPotion /> by: Baba-Yaga Coding Team&copy;
         </h5>
         <div className="icons">
           <a className="bh" href={`https://www.behance.net/bakajacagaa403`}>

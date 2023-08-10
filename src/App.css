@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-h1{
+h1 {
   font-size: 3rem;
   color: #4c6942;
   font-weight: 600;
@@ -21,7 +21,6 @@ h2 {
   letter-spacing: normal;
 }
 
-
 h3 {
   margin: 1rem 2rem;
   font-weight: 200;
@@ -29,13 +28,13 @@ h3 {
   color: #4c6942;
 }
 
-h4{
+h4 {
   margin: 1rem;
   font-weight: 200;
   font-size: 1.5rem;
   color: #4c6942;
 }
 
-main{
+main {
   padding: 1rem;
 }

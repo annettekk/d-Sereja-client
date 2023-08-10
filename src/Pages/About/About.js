@@ -7,16 +7,17 @@ import { Link } from "react-router-dom";
 export default function About() {
   return (
     <>
-        <Helmet>
-          <title>Jaga Galganek Photography About Page</title>
-          <meta
-            name="description"
-            content="This is the about page for Jaga Galganek's Photography Portfoilio"
-          />
-          <link rel="canonical" href="/about" />
-        </Helmet>
-        <main>
-          <h2 className="about-header">About</h2>
+      <Helmet>
+        <title>Jaga Galganek Photography About Page</title>
+        <meta
+          name="description"
+          content="This is the about page for Jaga Galganek's Photography Portfoilio"
+        />
+        <link rel="canonical" href="/about" />
+      </Helmet>
+      <main>
+        <h2 className="about-header">About</h2>
+        <div className="about-container">
           <img className="about-photo" src={aboutPhoto2} alt="Photographer" />
           <p className="aboutP">
             Jaga is a Polish film photographer, based in Suffolk, UK. She shoots
@@ -38,37 +39,37 @@ export default function About() {
             Occasionally, even a subtle element may emerge, subtly unsettling
             the viewer, perhaps even evoking a sense of foreboding.
           </p>
-          <h3 className="equipment">Equipment</h3>
-          <p className="equipmentP">
-            Navigating the realms of film, Jaga wields the Pentax ME Super and
-            Pentax 6x7 as her creative companions. With the ME Super, she dances
-            between hues, capturing life in vivid colors while honing her focus
-            with its seamless blend of manual finesse and automatic ease. The
-            6x7 elevates her art further, embracing medium format grandeur for
-            unmatched clarity and range. Through this gear, grain becomes her
-            symphony, adding depth to each frame. In a digital age, her devotion
-            to film crafts timeless tales, each click an ode to enduring
-            artistry
-          </p>
+        </div>
+        <h3 className="equipment">Equipment</h3>
+        <p className="equipmentP">
+          Navigating the realms of film, Jaga wields the Pentax ME Super and
+          Pentax 6x7 as her creative companions. With the ME Super, she dances
+          between hues, capturing life in vivid colors while honing her focus
+          with its seamless blend of manual finesse and automatic ease. The 6x7
+          elevates her art further, embracing medium format grandeur for
+          unmatched clarity and range. Through this gear, grain becomes her
+          symphony, adding depth to each frame. In a digital age, her devotion
+          to film crafts timeless tales, each click an ode to enduring artistry
+        </p>
 
-          <h3>Featured in:</h3>
-          <ul className="featuredUl">
-            <li className="featuredLi">
-              <Link to="https://www.vogue.com/photovogue/photographers/207945">
-                Vogue
-              </Link>
-            </li>
-            <li className="featuredLi">
-              <Link to="https://www.lomography.com/magazine/">
-                Lomography Interview
-              </Link>
-            </li>
-            <li className="featuredLi">
-              <Link to="https://www.instagram.com/international.film.swap.group/?hl=en">
-                International Film Swap
-              </Link>
-            </li>
-          </ul>
+        <h3>Featured in:</h3>
+        <ul className="featuredUl">
+          <li className="featuredLi">
+            <Link to="https://www.vogue.com/photovogue/photographers/207945">
+              Vogue
+            </Link>
+          </li>
+          <li className="featuredLi">
+            <Link to="https://www.lomography.com/magazine/">
+              Lomography Interview
+            </Link>
+          </li>
+          <li className="featuredLi">
+            <Link to="https://www.instagram.com/international.film.swap.group/?hl=en">
+              International Film Swap
+            </Link>
+          </li>
+        </ul>
         <h3 className="contact">Contact</h3>
         <p className="email">jagagalganek@gmail.com</p>
       </main>

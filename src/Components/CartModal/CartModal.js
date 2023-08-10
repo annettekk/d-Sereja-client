@@ -36,7 +36,7 @@ export default function CartModal({ closeCartModal }) {
             <button onClick={() => (deleteFromCart(photo))}><BsFillCartDashFill/></button>
           </div>
         ))}
-        <span className="cross" onClick={closeCartModal}>
+        <span className="closeButton" onClick={closeCartModal}>
           <AiOutlineCloseCircle />
         </span>
       </div>

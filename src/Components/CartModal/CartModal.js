@@ -32,7 +32,6 @@ export default function CartModal({ closeCartModal }) {
           <Profile/>
           <h2>Your Cart</h2>
           {!cart && <p className="emptyCart">Your cart is empty</p>} 
-          {cart.length === 0 && <p className="emptyCart">Your cart is empty</p>} 
           {cart && cart.map((photo, _id) =>(
             <div className="cartItem" key={_id}>
               <img className="cartPhoto" alt={photo.title} src={require(`../../${photo.photoSrc}`)}></img>

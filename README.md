@@ -44,7 +44,7 @@ Final project for 301, a photographer's portfolio where users can buy and like p
 - Gallery page
 - Gallery modal to see a photo in detail, like and add to cart icons
 - MongoDB stores photo metadata
-- Auth0 login for admins
+- Auth0 login and logout for admins and visitors
 - Admin page visible only to authorised users; admins can add, delete and edit gallery photos, see number of likes for every photo, fave and unfave photos
 - Shopping cart modal in the header accessible from any page of the site; can add photos to cart from Gallery page; can delete photos from the cart; cart items stored in local storage in case of page reload
 - Burger site nav menu for mobile version of the site

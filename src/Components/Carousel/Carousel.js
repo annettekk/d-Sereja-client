@@ -1,43 +1,52 @@
-import React from "react";
-import { useSnapCarousel } from "react-snap-carousel";
+import React, { useState } from "react";
 import "./Carousel.css";
-import Imgone from "../../Images/HeroHome.jpg";
-import Imgone2 from "../../Images/HeroHome2.jpg";
+import HeroHome from "../../Images/HeroHome.jpg";
+import HeroHome2 from "../../Images/HeroHome2.jpg";
+import HeroHome3 from "../../Images/HeroHome3.jpg";
+import HeroHome4 from "../../Images/HeroHome4.jpg";
+import HeroHome5 from "../../Images/HeroHome5.jpg";
+import HeroHome6 from "../../Images/HeroHome6.jpg";
+import { FaChevronCircleLeft } from "react-icons/fa";
+import { FaChevronCircleRight } from "react-icons/fa";
 
 export default function Carousel() {
-  const imgArr = [Imgone, Imgone2];
+  const [count, setCount] = useState(0);
 
-  const { scrollRef } = useSnapCarousel();
+  const imgArr = [
+    HeroHome,
+    HeroHome2,
+    HeroHome3,
+    HeroHome4,
+    HeroHome5,
+    HeroHome6,
+  ];
+
+  function handleRightClick() {
+    if (count <= 4) {
+      setCount(count + 1);
+    } else if (count === 5) {
+      setCount(0);
+    }
+  }
+
+  function handleLeftClick() {
+    if (count === 0) {
+      setCount(5);
+    } else if (count >= 1) {
+      setCount(count - 1);
+    }
+  }
 
   return (
-    <ul
-      className="scroll"
-      ref={scrollRef}
-      // style={{
-      //   display: "flex",
-      //   overflow: "auto",
-      //   scrollSnapType: "x mandatory",
-      // }}
-    >
-      {imgArr.map((photo, _id) => (
-        <li
-          key={_id}
-          className="carousel-item"
-          // style={{
-          //   backgroundColor: "aqua",
-          //   fontSize: "50px",
-          //   width: "250px",
-          //   height: "250px",
-          //   flexShrink: 0,
-          //   color: "#fff",
-          //   display: "flex",
-          //   justifyContent: "center",
-          //   alignItems: "center",
-          // }}
-        >
-          <img className="carouselPhoto" src={photo} alt="model" />
-        </li>
-      ))}
-    </ul>
+    <div>
+      <div className="hero-container">
+        <img className="hero-home" src={imgArr[count]} alt="HeroHome" />
+        <FaChevronCircleLeft className="left-click" onClick={handleLeftClick} />
+        <FaChevronCircleRight
+          className="right-click"
+          onClick={handleRightClick}
+        />
+      </div>
+    </div>
   );
 }

@@ -1,22 +1,24 @@
-.scroll {
-    display: 'flex';
-    overflow: 'auto';
-    scroll-snap-type: 'x mandatory'
+.hero-container {
+  display: grid;
+  place-items: center;
+  position: relative;
 }
 
-.carousel-item {
-    background-color: 'aqua';
-    font-size: '50px';
-    width: '250px';
-    height: '250px';
-    flex-shrink: 0;
-    color: '#fff';
-    display: 'flex';
-    justify-content: 'center';
-    align-items: 'center'
+.hero-home {
+  width: 60vw;
+  height: 50vw;
+  object-fit: cover;
 }
 
-.carouselPhoto{
-    width: 100%;
-    padding: 1rem;
+.left-click {
+  position: absolute;
+  left: 1rem;
+  font-size: 4rem;
+}
+
+.right-click {
+  position: absolute;
+  right: 1rem;
+  font-size: 4rem;
+  color: palevioletred;
 }

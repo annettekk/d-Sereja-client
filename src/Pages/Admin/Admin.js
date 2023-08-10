@@ -12,6 +12,7 @@ export default function Contact() {
     photoSrc: "",
     model: "",
     desciption: "",
+    liked:0
   });
 
   const handleChanges = (e) => {
@@ -56,6 +57,7 @@ export default function Contact() {
         photoSrc: "",
         model: "",
         desciption: "",
+        liked: 0,
       });
     } catch (error) {
       console.log(error);
@@ -120,6 +122,16 @@ export default function Contact() {
             onChange={handleChanges}
             value={formData.desciption}
           ></textarea>
+          <label className="labelText">Liked</label>
+          <input
+            className="inputForm"
+            name="liked"
+            required="0"
+            placeholder="0"
+            disabled
+            onChange={handleChanges}
+            value={formData.liked}
+          ></input>
           <button className="submitButton" type="submit">
             Add Photo
           </button>
@@ -136,17 +148,17 @@ export default function Contact() {
                   alt={photo.title}
                 ></img>
                 {photo.faved && (
-                  <button onClick={() => unFave(photo)}>
+                  <button className="niceButton" onClick={() => unFave(photo)}>
                     <MdFavorite />
                   </button>
                 )}
                 {!photo.faved && (
-                  <button onClick={() => makeFave(photo)}>
+                  <button className="niceButton" onClick={() => makeFave(photo)}>
                     <MdOutlineFavoriteBorder />
                   </button>
                 )}
                 <button
-                  className="deleteButton"
+                  className="niceButton"
                   onClick={() => deletePhoto(photo)}
                 >
                   <AiFillDelete />

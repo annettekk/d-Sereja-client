@@ -37,7 +37,7 @@ export default function CartModal({ closeCartModal }) {
             <div className="cartItem" key={_id}>
               <img className="cartPhoto" alt={photo.title} src={require(`../../${photo.photoSrc}`)}></img>
               <p className="cartPhotoTitle">Photo Name: {photo.title}</p>
-              <button onClick={() => (deleteFromCart(photo))}><BsFillCartDashFill/></button>
+              <button className="deleteCartItem" onClick={() => (deleteFromCart(photo))}><BsFillCartDashFill/></button>
             </div>
           ))}
 

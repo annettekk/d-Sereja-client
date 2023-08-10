@@ -1,12 +1,12 @@
 .hero-container {
   display: grid;
   place-items: center;
-  position: relative;
 }
 
 .hero-home {
+  padding-top: 1rem;
   width: 60vw;
-  height: 50vw;
+  height: 70vh;
   object-fit: cover;
 }
 
@@ -35,5 +35,3 @@
   font-size: 2rem;
   color: #4c6942;
 }
-
-/* @media */

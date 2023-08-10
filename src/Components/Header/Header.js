@@ -49,7 +49,6 @@ export default function Header({ handleCartModal }) {
         {!user && (
           <div>
             <Login />
-            {/* <FiLogIn /> */}
           </div>
         )}
         {user && <Logout />}

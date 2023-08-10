@@ -48,7 +48,6 @@ export default function Photos({handlePhotoModal}) {
   
   return (
     <>
-        <div>Photos</div>
         {photos.map((photo, _id) => (
             <div key={_id} className='photoDiv'>
                 <h3 className=''>{photo.title}</h3>

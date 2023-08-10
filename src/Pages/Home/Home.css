@@ -7,19 +7,9 @@
   padding: 20px;
 }
 
-h2 {
-  margin-top: 10px;
-  margin-left: 2rem;
-  margin-bottom: 10px;
-  display: inline;
-  font-size: xx-large;
-  font-family: "Playfair Display SC";
-  color: #4c6942;
-  letter-spacing: normal;
-}
 
 .hero-image {
   width: 70vw;
   position: fixed;
-  /* border-radius: 8px; */
+  border-radius: 8px;
 }

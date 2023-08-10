@@ -5,7 +5,6 @@ import Login from "../Login/Login";
 import Logout from "../Logout/Logout";
 import Profile from "../Profile/Profile";
 import { useAuth0 } from "@auth0/auth0-react";
-import { FiLogIn } from "react-icons/fi";
 
 export default function Header({ handleCartModal }) {
   const { user } = useAuth0();

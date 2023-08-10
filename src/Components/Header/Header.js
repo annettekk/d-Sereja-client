@@ -1,4 +1,5 @@
 import React from "react";
+import "./Header.css";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import Login from "../Login/Login";
@@ -11,50 +12,52 @@ export default function Header({ handleCartModal }) {
 
   return (
     <header>
-      <h1>Jaga Galganek Photography</h1>
-      <nav>
-        <ul>
-          <li className="navLi">
-            <Link className="link" to="/">
-              <p className="linkP">Home</p>
-            </Link>
-          </li>
-          <li className="navLi">
-            <Link className="link" to="/about">
-              About
-            </Link>
-          </li>
-          <li className="navLi">
-            <Link className="link" to="/gallery">
-              Gallery
-            </Link>
-          </li>
-          {user &&
-            (user.email === process.env.REACT_APP_EMAIL ||
-              user.email === process.env.REACT_APP_EMAIL2 ||
-              user.email === process.env.REACT_APP_EMAIL3 ||
-              user.email === process.env.REACT_APP_EMAIL4) && (
-              <li className="navLi">
-                <Link className="link" to="/admin">
-                  Admin
-                </Link>
-              </li>
-            )}
-        </ul>
-      </nav>
-      <button onClick={() => handleCartModal()}>
-        <FiShoppingCart />
-      </button>
-      <div className="Login">
-        {!user && (
-          <div>
-            <Login />
-          </div>
-        )}
-        {user && <Logout />}
-      </div>
-      <div>
-        <Profile />
+      <div className="container">
+        <h1>Jaga Galganek Photography</h1>
+        <nav>
+          <ul className="header-nav-list">
+            <li className="navLi">
+              <Link className="link" to="/">
+                Home
+              </Link>
+            </li>
+            <li className="navLi">
+              <Link className="link" to="/about">
+                About
+              </Link>
+            </li>
+            <li className="navLi">
+              <Link className="link" to="/gallery">
+                Gallery
+              </Link>
+            </li>
+            {user &&
+              (user.email === process.env.REACT_APP_EMAIL ||
+                user.email === process.env.REACT_APP_EMAIL2 ||
+                user.email === process.env.REACT_APP_EMAIL3 ||
+                user.email === process.env.REACT_APP_EMAIL4) && (
+                <li className="navLi">
+                  <Link className="link" to="/admin">
+                    Admin
+                  </Link>
+                </li>
+              )}
+          </ul>
+        </nav>
+        <button onClick={() => handleCartModal()}>
+          <FiShoppingCart />
+        </button>
+        <div className="Login">
+          {!user && (
+            <div>
+              <Login />
+            </div>
+          )}
+          {user && <Logout />}
+        </div>
+        <div>
+          <Profile />
+        </div>
       </div>
     </header>
   );

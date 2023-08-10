@@ -45,13 +45,15 @@
 }
 
 .cartButton {
-  position: relative;
+  position: absolute;
   float: right;
   background-color: #d7dbd7;
   border: none;
   transition: .3s;
   margin: .2rem;
   padding-top: .2rem;
+  top: 3vh;
+  right: 2vw;
 }
 
 .cartButton:hover {

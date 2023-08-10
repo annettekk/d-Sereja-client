@@ -12,6 +12,7 @@
 
 .header-nav {
   display: none;
+  word-spacing: 2rem;
 }
 
 .header-nav-list {

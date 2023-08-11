@@ -47,12 +47,9 @@ export default function Carousel() {
   function handleRightClick() {
     if (count <= imgArr.length-2) {
       setCount(count + 1);
-      console.log(count)
     } else if (count === imgArr.length-1) {
       setCount(0);
     }
-          console.log(count)
-
   }
 
   function handleLeftClick() {
@@ -61,8 +58,6 @@ export default function Carousel() {
     } else if (count >= 1) {
       setCount(count - 1);
     }
-    console.log(count)
-
   }
   setPhotoArr()
 

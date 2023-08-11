@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Carousel.css";
+import axios from "axios";
 import HeroHome from "../../Images/HeroHome.jpg";
 import HeroHome2 from "../../Images/HeroHome2.jpg";
 import HeroHome3 from "../../Images/HeroHome3.jpg";
@@ -11,7 +12,8 @@ import { FaChevronCircleRight } from "react-icons/fa";
 
 export default function Carousel() {
   const [count, setCount] = useState(0);
-
+  const[photos, setPhotos] = useState([]);
+  
   const imgArr = [
     HeroHome,
     HeroHome2,
@@ -21,21 +23,48 @@ export default function Carousel() {
     HeroHome6,
   ];
 
+  useEffect(() => {
+      getPhotos()
+  }, [])
+
+  async function getPhotos(){
+      try{
+          let API = 'https://analogue-film.onrender.com/photos?faved=true'
+          const result = await axios.get(API)
+          setPhotos([])
+          setPhotos(result.data)
+      }catch(error){
+          console.log(error)
+      }
+  }
+
+  function setPhotoArr(){
+    for(let i=0; i < photos.length; i++){
+      imgArr.push(require(`../../${photos[i].photoSrc}`))
+    }
+  }
+
   function handleRightClick() {
-    if (count <= 4) {
+    if (count <= imgArr.length-2) {
       setCount(count + 1);
-    } else if (count === 5) {
+      console.log(count)
+    } else if (count === imgArr.length-1) {
       setCount(0);
     }
+          console.log(count)
+
   }
 
   function handleLeftClick() {
     if (count === 0) {
-      setCount(5);
+      setCount(imgArr.length-1);
     } else if (count >= 1) {
       setCount(count - 1);
     }
+    console.log(count)
+
   }
+  setPhotoArr()
 
   return (
     <div>

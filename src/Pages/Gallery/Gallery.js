@@ -23,10 +23,10 @@ export default function Gallery({ addToCart }) {
   return (
     <>
       <Helmet>
-        <title>Jaga Galganek Photography Gallery</title>
+        <title>Sergey Kazakov Photography Gallery</title>
         <meta
           name="description"
-          content="This is the gallery page for Jaga Galganek's Photography Portfoilio"
+          content="This is the gallery page for Sergey Kazakov's Photography Portfoilio"
         />
         <link rel="canonical" href="/gallery" />
       </Helmet>

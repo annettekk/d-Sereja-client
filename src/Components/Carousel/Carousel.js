@@ -29,7 +29,7 @@ export default function Carousel() {
 
   async function getPhotos(){
       try{
-          let API = 'https://analogue-film.onrender.com/photos?faved=true'
+          let API = 'https://d-sereja-server.onrender.com/photos?faved=true'
           const result = await axios.get(API)
           setPhotos([])
           setPhotos(result.data)

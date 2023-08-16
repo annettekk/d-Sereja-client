@@ -28,7 +28,7 @@ export default function Contact() {
 
   async function getPhotos() {
     try {
-      let API = "https://analogue-film.onrender.com/photos";
+      let API = "https://d-sereja-server.onrender.com/photos";
       const result = await axios.get(API);
       setPhotos([]);
       setPhotos(result.data);
@@ -38,7 +38,7 @@ export default function Contact() {
   }
 
   const deletePhoto = async (photo) => {
-    await axios.delete(`https://analogue-film.onrender.com/photos/${photo._id}`);
+    await axios.delete(`https://d-sereja-server.onrender.com/photos/${photo._id}`);
     getPhotos();
   };
 
@@ -49,7 +49,7 @@ export default function Contact() {
 
   const handleAddPhoto = async (newPhoto) => {
     try {
-      let API = `https://analogue-film.onrender.com/photos`;
+      let API = `https://d-sereja-server.onrender.com/photos`;
       const result = await axios.post(API, newPhoto);
       setPhotos([...photos, result.data]);
       setFormData({
@@ -66,23 +66,23 @@ export default function Contact() {
 
   const makeFave = async (photo) => {
     photo.faved = !photo.faved;
-    await axios.put(`https://analogue-film.onrender.com/photos/${photo._id}`, photo);
+    await axios.put(`https://d-sereja-server.onrender.com/photos/${photo._id}`, photo);
     getPhotos();
   };
 
   const unFave = async (photo) => {
     photo.faved = !photo.faved;
-    await axios.put(`https://analogue-film.onrender.com/photos/${photo._id}`, photo);
+    await axios.put(`https://d-sereja-server.onrender.com/photos/${photo._id}`, photo);
     getPhotos();
   };
 
   return (
     <>
       <Helmet>
-        <title>Jaga Galganek Photography Admin Page</title>
+        <title>Sergey Kazakov Photography Admin Page</title>
         <meta
           name="description"
-          content="This is the admin page for Jaga Galganek's Photography Portfoilio"
+          content="This is the admin page for Sergey Kazakov's Photography Portfoilio"
         />
         <link rel="canonical" href="/contact" />
       </Helmet>

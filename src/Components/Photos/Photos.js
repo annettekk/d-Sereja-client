@@ -14,7 +14,7 @@ export default function Photos({handlePhotoModal}) {
 
     async function getPhotos(){
         try{
-            let API = 'https://analogue-film.onrender.com/photos'
+            let API = 'https://d-sereja-server.onrender.com/photos'
             const result = await axios.get(API)
             setPhotos([])
             setPhotos(result.data)
@@ -26,7 +26,7 @@ export default function Photos({handlePhotoModal}) {
 
     const updatePhoto = async(photo) => {
         photo.liked = photo.liked + 1
-        await axios.put(`https://analogue-film.onrender.com/photos/${photo._id}`, photo)
+        await axios.put(`https://d-sereja-server.onrender.com/photos/${photo._id}`, photo)
         getPhotos()
     }
 

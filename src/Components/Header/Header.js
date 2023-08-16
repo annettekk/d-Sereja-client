@@ -14,7 +14,7 @@ export default function Header({ handleCartModal }) {
     <header>
       <div className="container">
         <Burger />
-        <h1>JAGA GALGANEK PHOTOGRAPHY</h1>
+        <h1>SERGEY KAZAKOV PHOTOGRAPHY</h1>
         <nav className="header-nav">
           <ul className="header-nav-list">
             <li className="navLi">

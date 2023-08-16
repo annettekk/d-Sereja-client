@@ -48,7 +48,7 @@ export default function Photos({handlePhotoModal}) {
       <div className="gallery">
         {photos.map((photo, _id) => (
             <div key={_id} className='photoDiv'>
-                {/* <h3 className=''>{photo.title}</h3> */}
+                <h3 className=''>{photo.title}</h3>
                 <img className='photo' src={require(`../../${photo.photoSrc}`)} alt={photo.title} onClick={() => handlePhotoModal(photo)}></img> 
                 <button className="niceButton" onClick={() => updatePhoto(photo)}><FcLike /></button>
                 <button className="niceButton" onClick={() => addToCart(photo)}><BsFillCartPlusFill/></button>

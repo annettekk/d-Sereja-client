@@ -8,10 +8,10 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>Sergey Kazakov Photography About Page</title>
+        <title>Jaga Galganek Photography About Page</title>
         <meta
           name="description"
-          content="This is the about page for Sergey Kazakov's Photography Portfoilio"
+          content="This is the about page for Jaga Galganek's Photography Portfoilio"
         />
         <link rel="canonical" href="/about" />
       </Helmet>
@@ -20,13 +20,22 @@ export default function About() {
           <div className="about-container">
             <img className="about-photo" src={aboutPhoto2} alt="Photographer" />
             <p className="aboutP">
-              Sergey is a Russian-American photographer, based in Batavia, IL. He perceives his photography as a rich
+              Jaga is a Polish film photographer, based in Suffolk, UK. She
+              shoots film since her teenage years. Her first camera was soviet
+              Zenit-E. At the moment she uses 35mm - Pentax ME super and medium
+              format - Pentax 6x7. She perceives her photography as a rich
               tapestry of contradictions and ambivalence. A central objective
-              for him is to embrace the complexity inherent in
-              the world. The
-            images he captures serve as a profound reflection of his own
-              inner self. Echoes of sombreness can be discerned within his
-              landscapes - a touch of ethereality, an evocation of suspended
+              for her is to seamlessly integrate her feminine and feministic
+              perspective into her work, embracing the complexity inherent in
+              both. While her models may exude an apparent fragility and
+              vulnerability, it is their profound sensitivity that becomes their
+              ultimate strength. Their power and confidence emanate from a
+              beauty that transcends mere physical appearance, instead rooted in
+              the depth of heir personal experiences. Additionally, the
+              portraits she captures serve as a profound reflection of her own
+              inner self, from times when she suffered depression several years
+              ago. Echoes of that sombreness can be discerned within her
+              portraits - a touch of ethereality, an evocation of suspended
               realms between dreams and reality. Occasionally, even a subtle
               element may emerge, subtly unsettling the viewer, perhaps even
               evoking a sense of foreboding.
@@ -34,18 +43,21 @@ export default function About() {
           </div>
           <h3 className="equipment">Equipment</h3>
           <p className="equipmentP">
-            Navigating the realms of digital photography, Sergey wields the Pentax ME
-            Super and Pentax 6x7 as his creative companions. With the ME Super,
-            he dances between hues, capturing life in vivid colors while honing
-            his focus with its seamless blend of manual finesse and automatic
-            ease. The 6x7 elevates his art further, embracing medium format
-            grandeur for unmatched clarity and range. 
+            Navigating the realms of film photography, Jaga wields the Pentax ME
+            Super and Pentax 6x7 as her creative companions. With the ME Super,
+            she dances between hues, capturing life in vivid colors while honing
+            her focus with its seamless blend of manual finesse and automatic
+            ease. The 6x7 elevates her art further, embracing medium format
+            grandeur for unmatched clarity and range. Through this gear, grain
+            becomes her symphony, adding depth to each frame. In a digital age,
+            her devotion to film crafts timeless tales, each click an ode to
+            enduring artistry
           </p>
           <h3>Featured in</h3>
           <ul className="featuredUl">
             <li className="featuredLi">
               <a href="https://www.vogue.com/photovogue/photographers/207945">
-                National Geographics
+                Vogue
               </a>
             </li>
             <li className="featuredLi">
@@ -60,7 +72,7 @@ export default function About() {
             </li>
           </ul>
           <h3 className="contact">Contact</h3>
-          <p className="email">skazakov2007@gmail.com</p>
+          <p className="email">jagagalganek@gmail.com</p>
         </div>
       </main>
     </>
